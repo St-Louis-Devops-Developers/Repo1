@@ -7,6 +7,7 @@ node
     
     stage('mail')
     {
-        step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'brahminikatta@gmail.com', sendToIndividuals: false])
+        mail bcc: '', body: '''Greetings,
+Hope u r doing good.''', cc: 'reply2bhargav94@gmail.com', from: '', replyTo: '', subject: 'Regarding veridic', to: 'brahminikatta@gmail.com'
     }
 }
